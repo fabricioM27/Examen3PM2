@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen3PM2.actualizarnotasPage"
+              xmlns:conver="clr-namespace:Examen3PM2.Controllers"
+             Title="actualizarnotasPage">
+
+    <ContentPage.Resources>
+        <conver:Byte_array_image x:Key="byte_array_image"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout >
+            <Image VerticalOptions="Start" Margin="10" x:Name="photo" Source="{Binding Photo_Record, Converter={StaticResource byte_array_image}}" WidthRequest="100" HeightRequest="200" Background="BLACK"/>
+            <Entry Margin="10" Keyboard="Text" Placeholder="Indique su descripcion" x:Name="descripcion_txt"></Entry>
+            <DatePicker x:Name="fechaPicker"/>
+            <Button Margin="10" x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked"></Button>
+            <Button Margin="10" x:Name="btn_photo" Text="Capturar imagen" Clicked="btn_photo_Clicked"></Button>
+            <Button Margin="10" x:Name="volverlista" Text="Ir A Lista" Clicked="volverlista_Clicked"></Button>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+    
+</ContentPage>

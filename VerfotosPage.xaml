@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen3PM2.VerfotosPage"
+             xmlns:conver="clr-namespace:Examen3PM2.Controllers"
+             Title="VerfotosPage">
+
+    <ContentPage.Resources>
+        <conver:Byte_array_image x:Key="byte_array_image"></conver:Byte_array_image>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Image x:Name="imagen" Source="{Binding Photo_Record,Converter={StaticResource byte_array_image}}" Grid.Column="0" />
+    </ContentPage.Content>
+
+</ContentPage>
